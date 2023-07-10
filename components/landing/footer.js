@@ -1,17 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import React from "react";
-import Container from "./container";
+import Container from "../container";
 
 export default function Footer() {
-  const navigation = [
-    "Product",
-    "Features",
-    "Pricing",
-    "Company",
-    "Blog",
-  ];
-  const legal = ["Terms", "Privacy", "Legal"];
+  const navigation = [];
+  const legal = [];
+
   return (
     <div className="relative">
       <Container>
@@ -27,7 +22,7 @@ export default function Footer() {
                       height="32"
                       className="w-8"
                     />
-                  <span>Nextly</span>
+                  <span>Game Library</span>
               </Link>
             </div>
 

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import Container from "./container";
+import Container from "../container";
 
 const Benefits = (props) => {
   const { data } = props;

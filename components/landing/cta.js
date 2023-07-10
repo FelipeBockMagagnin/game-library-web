@@ -1,5 +1,5 @@
 import React from "react";
-import Container from "./container";
+import Container from "../container";
 
 const Cta = () => {
   return (
@@ -10,7 +10,7 @@ const Cta = () => {
             Ready to try-out this app?
           </h2>
           <p className="mt-2 font-medium text-white text-opacity-90 lg:text-xl">
-            placeholder
+            {/*placeholder*/}
           </p>
         </div>
         <div className="flex-shrink-0 w-full text-center lg:w-auto">
