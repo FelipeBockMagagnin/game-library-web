@@ -2,10 +2,14 @@ import Link from "next/link";
 import ThemeChanger from "./DarkSwitch";
 import Image from "next/image"
 import { Disclosure } from "@headlessui/react";
+import { useSession, signIn, signOut } from "next-auth/react"
+import { useRouter } from 'next/navigation';
+import { useEffect } from "react";
 
 const Navbar = ({home}) => {
   console.log('home, navbar', home)
   const navigation = [];
+  const { data: session } = useSession()
 
   return (
     <div className="w-full">
@@ -83,13 +87,15 @@ const Navbar = ({home}) => {
           </ul>
         </div>
 
-        {home && <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          <Link href="/login" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
+        <div className="hidden mr-3 space-x-4 lg:flex nav__item">
+          {home && <Link href="/login" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
               Get Started
-          </Link>
+          </Link>}
 
           <ThemeChanger />
-        </div>}
+
+          {session && <button onClick={() => signOut()}>Sign out</button>}
+        </div>
       </nav>
     </div>
   );
