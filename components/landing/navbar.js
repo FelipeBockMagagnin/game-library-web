@@ -60,11 +60,11 @@ const Navbar = ({home}) => {
                 <Disclosure.Panel className="flex flex-wrap w-full my-5 lg:hidden">
                   <>
                     {navigation.map((item, index) => (
-                      <Link key={index} href="/" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
+                      <Link key={index} href="/auth/signin" className="w-full px-4 py-2 -ml-4 text-gray-500 rounded-md dark:text-gray-300 hover:text-indigo-500 focus:text-indigo-500 focus:bg-indigo-100 dark:focus:bg-gray-800 focus:outline-none">
                           {item}
                       </Link>
                     ))}
-                    <Link href="/" className="w-full px-6 py-2 mt-3 text-center text-white bg-indigo-600 rounded-md lg:ml-5">         
+                    <Link href="/" className="w-full px-6 py-1 text-center text-white bg-indigo-600 rounded-md lg:ml-5">         
                         Get Started
                     </Link>
                   </>
@@ -88,7 +88,7 @@ const Navbar = ({home}) => {
         </div>
 
         <div className="hidden mr-3 space-x-4 lg:flex nav__item">
-          {home && <Link href="/login" className="px-6 py-2 text-white bg-indigo-600 rounded-md md:ml-5">
+          {home && <Link href="/auth/signin" className="px-3 py-1 text-white bg-indigo-600 rounded-md md:ml-5">
               Get Started
           </Link>}
 
